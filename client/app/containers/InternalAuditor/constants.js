@@ -1,0 +1,17 @@
+/*
+ *
+ * regulator constants
+ *
+ */
+
+export const FETCH_INTERNALAUDITORS = 'src/InternalAuditor/FETCH_INTERNALAUDITORS';
+export const REMOVE_INTERNALAUDITORS= 'src/InternalAuditor/REMOVE_INTERNALAUDITORS';
+export const INTERNALAUDITOR_FORM_CHANGE = 'src/InternalAuditor/INTERNALAUDITOR_FORM_CHANGE';
+export const SET_INTERNALAUDITOR_FORM_ERRORS = 'src/InternalAuditor/SET_INTERNALAUDITOR_FORM_ERRORS';
+export const INTERNALAUDITOR_FORM_RESET = 'src/InternalAuditor/INTERNALAUDITOR_FORM_RESET';
+export const SIGNUP_CHANGE = 'src/InternalAuditor/SIGNUP_CHANGE';
+export const SET_SIGNUP_FORM_ERRORS = 'src/InternalAuditor/SET_SIGNUP_FORM_ERRORS';
+export const SET_INTERNALAUDITORS_LOADING = 'src/InternalAuditor/SET_INTERNALAUDITORS_LOADING';
+export const SET_INTERNALAUDITOR_SUBMITTING = 'src/InternalAuditor/SET_INTERNALAUDITOR_SUBMITTING';
+export const SET_INTERNALAUDITOR_LOADING = 'src/InternalAuditor/SET_INTERNALAUDITOR_LOADING';
+export const SIGNUP_RESET = 'src/InternalAuditor/SIGNUP_RESET';

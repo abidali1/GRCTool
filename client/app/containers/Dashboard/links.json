@@ -1,0 +1,74 @@
+{
+  "ROLE_ADMIN": [
+    { "to": "", "name": "Account Details" },
+    { "to": "/security", "name": "Account Security" },
+    { "to": "/framework", "name": "Frameworks" },
+    { "to": "/users", "name": "Users" },
+    { "to": "/clients", "name": "Clients" },
+    { "to": "/regulators", "name": "Regulators" },
+    { "to": "/regulate", "name": "Add Regulator" },
+    { "to": "/review", "name": "Reviews" },
+    { "to": "/wishlist", "name": "WishList" },
+    { "to": "/support", "name": "Support" }
+  ],
+  "ROLE_CLIENT": [
+    { "to": "", "name": "Account Details" },
+    { "to": "/security", "name": "Account Security" },
+    { "to": "/framework", "name": "Frameworks" },
+    { "to": "/registeredaccount", "name":"Registered Account"},
+    { "to": "/addimplementer", "name": "add implementer" },
+    { "to": "/addexternalauditor", "name": "add externalauditor" },
+    { "to": "/addinternalauditor", "name": "add internalauditor" },
+    { "to": "/wishlist", "name": "WishList" },
+    { "to": "/support", "name": "Support" }
+  ],
+  "ROLE_IMPLEMENTER": [
+    { "to": "", "name": "Account Details" },
+    { "to": "/security", "name": "Account Security" },
+    { "to": "/address", "name": "Address" },
+    { "to": "/framework", "name": "Frameworks" },
+    { "to": "/control", "name": "Controls" },
+    { "to": "/orders", "name": "Orders" },
+    { "to": "/wishlist", "name": "WishList" },
+    { "to": "/support", "name": "Support" }
+  ],
+    "ROLE_EXTERNALAUDITOR": [
+    { "to": "", "name": "Account Details" },
+    { "to": "/security", "name": "Account Security" },
+    { "to": "/address", "name": "Address" },
+    { "to": "/framework", "name": "Frameworks" },
+    { "to": "/control", "name": "Controls" },
+    { "to": "/orders", "name": "Orders" },
+    { "to": "/wishlist", "name": "WishList" },
+    { "to": "/support", "name": "Support" }
+  ],
+    "ROLE_INTERNALAUDITOR": [
+    { "to": "", "name": "Account Details" },
+    { "to": "/security", "name": "Account Security" },
+    { "to": "/address", "name": "Address" },
+    { "to": "/framework", "name": "Frameworks" },
+    { "to": "/control", "name": "Controls" },
+    { "to": "/orders", "name": "Orders" },
+    { "to": "/wishlist", "name": "WishList" },
+    { "to": "/support", "name": "Support" }
+  ],
+  "ROLE_REGULATOR": [
+    { "to": "", "name": "Account Details" },
+    { "to": "/security", "name": "Account Security" },
+    { "to": "/address", "name": "Address" },
+    { "to": "/framework", "name": "Frameworks" },
+    { "to": "/regulatorFrameworks", "name": "Regulator Frameworks" },
+    { "to": "/control", "name": "Controls" },
+    { "to": "/orders", "name": "Orders" },
+    { "to": "/wishlist", "name": "WishList" },
+    { "to": "/support", "name": "Support" }
+  ],
+  "ROLE_MEMBER": [
+    { "to": "", "name": "Account Details" },
+    { "to": "/security", "name": "Account Security" },
+    { "to": "/address", "name": "Address" },
+    { "to": "/orders", "name": "Orders" },
+    { "to": "/wishlist", "name": "WishList" },
+    { "to": "/support", "name": "Support" }
+  ]
+}

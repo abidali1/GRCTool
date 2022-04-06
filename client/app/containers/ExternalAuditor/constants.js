@@ -1,0 +1,17 @@
+/*
+ *
+ * regulator constants
+ *
+ */
+
+export const FETCH_EXTERNALAUDITORS = 'src/ExternalAuditor/FETCH_EXTERNALAUDITORS';
+export const REMOVE_EXTERNALAUDITORS = 'src/ExternalAuditor/REMOVE_EXTERNALAUDITORS';
+export const EXTERNALAUDITOR_FORM_CHANGE = 'src/ExternalAuditor/EXTERNALAUDITOR_FORM_CHANGE';
+export const SET_EXTERNALAUDITOR_FORM_ERRORS = 'src/ExternalAuditor/SET_EXTERNALAUDITOR_FORM_ERRORS';
+export const EXTERNALAUDITOR_FORM_RESET = 'src/ExternalAuditor/EXTERNALAUDITOR_FORM_RESET';
+export const SIGNUP_CHANGE = 'src/ExternalAuditor/SIGNUP_CHANGE';
+export const SET_SIGNUP_FORM_ERRORS = 'src/ExternalAuditor/SET_SIGNUP_FORM_ERRORS';
+export const SET_EXTERNALAUDITORS_LOADING = 'src/ExternalAuditor/SET_EXTERNALAUDITORS_LOADING';
+export const SET_EXTERNALAUDITOR_SUBMITTING = 'src/ExternalAuditor/SET_EXTERNALAUDITOR_SUBMITTING';
+export const SET_EXTERNALAUDITOR_LOADING = 'src/ExternalAuditor/SET_EXTERNALAUDITOR_LOADING';
+export const SIGNUP_RESET = 'src/ExternalAuditor/SIGNUP_RESET';
