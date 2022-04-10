@@ -1,7 +1,7 @@
 {
-  "name": "mern-ecommerce",
+  "name": "grc-tool",
   "version": "1.0.0",
-  "description": "MERN Ecommerce",
+  "description": "GRC Tool",
   "main": "server/index.js",
   "scripts": {
     "build": "npm run build:clean && cross-env NODE_ENV=production webpack --progress --colors",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohamedsamara/mern-ecommerce.git"
+    "url": "git+https://github.com/NorahAlShaikhMubarak/GRCTool.git"
   },
   "keywords": [
     "node",
@@ -25,12 +25,12 @@
     "redux-thunk",
     "webpack"
   ],
-  "author": "Mohamed Samara (https://github.com/mohamedsamara)",
+  "author": "Norah, Amaal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mohamedsamara/mern-ecommerce/issues"
+    "url": "https://github.com/NorahAlShaikhMubarak/GRCTool/issues"
   },
-  "homepage": "https://github.com/mohamedsamara/mern-ecommerce#readme",
+  "homepage": "https://github.com/NorahAlShaikhMubarak/GRCTool#readme",
   "dependencies": {
     "autosuggest-highlight": "^3.1.1",
     "aws-sdk": "^2.799.0",

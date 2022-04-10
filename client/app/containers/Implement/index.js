@@ -15,20 +15,20 @@ import Input from '../../components/Common/Input';
 import Button from '../../components/Common/Button';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
 
-class implemente extends React.PureComponent {
+class implement extends React.PureComponent {
   render() {
     const {
       implementerFormData,
       formErrors,
       ImplementerFormChange,
-      implementeForUs,
+      implementForUs,
       isSubmitting,
       isLoading
     } = this.props;
 
     const handleSubmit = event => {
       event.preventDefault();
-      implementeForUs();
+      implementForUs();
     };
 
     return (
@@ -150,4 +150,4 @@ const mapStateToProps = state => {
   };
 };
                        
-export default connect(mapStateToProps, actions)(implemente);
+export default connect(mapStateToProps, actions)(implement);

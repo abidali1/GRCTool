@@ -47,7 +47,7 @@ export const implementerSignupChange = (name, value) => {
   };
 };
 
-export const implementeForUs = () => {
+export const implementForUs = () => {
   return async (dispatch, getState) => {
     try {
       const phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
