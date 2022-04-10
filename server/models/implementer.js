@@ -33,6 +33,11 @@ const ImplementerSchema = new Schema({
     enum: ['Waiting Approval', 'Rejected', 'Approved']
 
   },
+  framework:[{
+    type: Schema.Types.ObjectId,
+    ref: 'Framework',
+    default: null
+  }],
   client:{
     type: Schema.Types.ObjectId,
     ref: 'Client',

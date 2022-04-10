@@ -1,5 +1,6 @@
 import {
   FETCH_IMPLEMENTERS,
+  FETCH_IMPLEMENTERS_SELECT,
   REMOVE_IMPLEMENTERS,
   IMPLEMENTER_FORM_CHANGE,
   SET_IMPLEMENTER_FORM_ERRORS,
@@ -15,13 +16,14 @@ import {
 
 const initialState = {
   implementers: [],
+  implementersSelect:[],
   implementerFormData: {
 
     name: '',
     email: '',
     phoneNumber: '',
 
-    framework: [], //modification
+   // framework: [], //modification
     // business: ''
   },
   formErrors: {},
@@ -83,7 +85,7 @@ const implementerReducer = (state = initialState, action) => {
           name: '',
           email: '',
           phoneNumber: '', //modification
-          framework: [],
+         // framework: [],
           business: ''
         },
         formErrors: {}
@@ -118,7 +120,11 @@ const implementerReducer = (state = initialState, action) => {
         ...state,
         isImplementerLoading: action.payload
       };
-
+      case FETCH_IMPLEMENTERS_SELECT:
+        return {
+          ...state,
+          implementersSelect: action.payload
+        };
     case SIGNUP_RESET:
 
       return {
@@ -135,6 +141,5 @@ const implementerReducer = (state = initialState, action) => {
   }
 };
 
- 
 
 export default implementerReducer;

@@ -107,7 +107,7 @@ router.get('/:id', async (req, res) => {
 router.get(
   '/list/select',
   auth,
-  role.checkRole(role.ROLES.Admin, role.ROLES.Regulator),
+  role.checkRole(role.ROLES.Admin, role.ROLES.Regulator, role.ROLES.Client),
   async (req, res) => {
     try {
       let frameworks = null;

@@ -20,6 +20,7 @@ import cartReducer from './containers/Cart/reducer';
 import newsletterReducer from './containers/Newsletter/reducer';
 import dashboardReducer from './containers/Dashboard/reducer';
 import accountReducer from './containers/Account/reducer';
+import assessmentReducer from './containers/AssessmentProcess/reducer';
 import addressReducer from './containers/Address/reducer';
 import resetPasswordReducer from './containers/ResetPassword/reducer';
 import usersReducer from './containers/Users/reducer';
@@ -51,6 +52,7 @@ const createReducer = history =>
     authentication: authenticationReducer,
     cart: cartReducer,
     newsletter: newsletterReducer,
+    assessment:assessmentReducer,
     dashboard: dashboardReducer,
     account: accountReducer,
     address: addressReducer,

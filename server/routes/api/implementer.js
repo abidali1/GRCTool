@@ -19,7 +19,7 @@ router.post('/implementer-request', auth,async (req, res) => {
     // const business = req.body.business;
     const phoneNumber = req.body.phoneNumber;
     const email = req.body.email;
-    const framework = req.body.framework;
+   // const framework = req.body.framework;
 
     if (!name || !email) {
       return res
@@ -45,7 +45,7 @@ router.post('/implementer-request', auth,async (req, res) => {
       name,
       email,
       phoneNumber,
-      framework,
+     // framework,
       client:user
     });
 
@@ -83,7 +83,28 @@ router.get(
     }
   }
 );
+router.get(
+  '/list/select',
+  auth,
+  // role.checkRole(role.ROLES.Client),
+  async (req, res) => {
+    try {
+      let implementers = null;
 
+
+        implementers = await Implementer.find({}, 'name');
+
+
+      res.status(200).json({
+        implementers
+      });
+    } catch (error) {
+      res.status(400).json({
+        error: 'Your request could not be processed. Please try again.'
+      });
+    }
+  }
+);
 // approve regulators
 router.put('/approve/:implementerId', auth, async (req, res) => {
   try {
@@ -100,28 +121,13 @@ router.put('/approve/:implementerId', auth, async (req, res) => {
     });
 
 ;
-    
-      
-    // // prepare async calls
-    // const asyncCalls = [];
 
-    // asyncCalls.push(   
        await createImplementerUser(
       implementerDoc.email,
       implementerDoc.Impname,
       implementerId,
       req.headers.host
     )
-    // );
-    // asyncCalls.push(
-    //   await createImplementerClient(
-    //   implementerDoc.email,
-    //   implementerDoc.name,
-    //   implementerId,
-    //   req.headers.host
-    // )
-    // );
-    
 
   
     res.status(200).json({

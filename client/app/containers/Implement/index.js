@@ -79,7 +79,7 @@ class implemente extends React.PureComponent {
                     }}
                   />
                 </Col>
-                <Col xs='12'>
+                {/* <Col xs='12'>
                   <Input
                     type={'text'}
                     error={formErrors['framework']}
@@ -91,7 +91,7 @@ class implemente extends React.PureComponent {
                       ImplementerFormChange(name, value);
                     }}
                   />
-                </Col>
+                </Col> */}
                 <Col xs='12'>
                   <Input
                     type={'textarea'}

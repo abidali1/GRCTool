@@ -20,6 +20,7 @@ import Framework from '../../../containers/Framework';
 import Order from '../../../containers/Order';
 import Wishlist from '../../../containers/WishList';
 import Support from '../../../containers/Support';
+import FrameworkToImplement from '../../../containers/FrameworkToImplement';
 import Implementer from '../../../containers/Implementer'
 import Implement from '../../../containers/Implement';
 import ExternalAuditor from '../../../containers/ExternalAuditor';
@@ -46,6 +47,7 @@ const Customer = props => {
               <Route path='/dashboard/support' component={Support} />
               {/* <Route path='/dashboard/implementer' component={Implementer} /> */}
               <Route path='/dashboard/addimplementer' component={Implement} />
+              <Route path='/dashboard/startimplementaion' component={FrameworkToImplement}/>
               {/* <Route path='/dashboard/internalauditor' component={InternalAuditor} /> */}
               <Route path='/dashboard/addinternalauditor' component={IntAudit} />
               <Route path='/dashboard/registeredaccount' component={ExternalAuditor} />

@@ -28,6 +28,7 @@ import * as shop from './containers/Shop/actions';
 import * as client from './containers/Client/actions';
 import * as regulator from './containers/Regulator/actions';
 import * as contact from './containers/Contact/actions';
+import * as assessmentprocess from './containers/AssessmentProcess/actions';
 import * as order from './containers/Order/actions';
 import * as review from './containers/Review/actions';
 import * as wishlist from './containers/WishList/actions';
@@ -44,6 +45,7 @@ export default function mapDispatchToProps(dispatch) {
       ...login,
       ...forgotPassword,
       ...navigation,
+      ...assessmentprocess,
       ...cart,
       ...newsletter,
       ...dashboard,

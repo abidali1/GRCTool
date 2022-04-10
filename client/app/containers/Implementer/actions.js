@@ -5,6 +5,7 @@ import axios from 'axios';
 import {
   FETCH_IMPLEMENTERS,
   REMOVE_IMPLEMENTERS,
+  FETCH_IMPLEMENTERS_SELECT,
   IMPLEMENTER_FORM_CHANGE,
   SET_IMPLEMENTER_FORM_ERRORS,
   IMPLEMENTER_FORM_RESET,
@@ -54,22 +55,22 @@ export const implementeForUs = () => {
         name: 'required',
         email: 'required|email',
         phoneNumber: ['required', `regex:${phoneno}`],
-        framework: 'required',
+       // framework: 'required',
         business: 'required|min:10'
       };
 
       const implementer = getState().implementer.implementerFormData;
     //  const user = getState().account.user;
-      const frameworks = getState().framework.frameworksSelect;
+    //  const frameworks = getState().framework.frameworksSelect;
 
-      const framework = unformatSelectOptions([implementer.framework]);
+    //  const framework = unformatSelectOptions([implementer.framework]);
 
       const newImplementer = {
         name: implementer.name,
         email: implementer.email,
         phoneNumber: implementer.phoneNumber, //modification
         // framework: unformatSelectOptions(implementer.framework),
-        framework: implementer.framework,//temp solution 
+       // framework: implementer.framework,//temp solution 
         business: implementer.business,
       };
 
@@ -81,7 +82,7 @@ export const implementeForUs = () => {
         'email.email': 'Email format is invalid.',
         'required.phoneNumber': 'Phone number is required.',
         'regex.phoneNumber': 'Phone number format is invalid.',
-        'required.framework': 'Framework is required.',
+       // 'required.framework': 'Framework is required.',
         'required.business': 'Business is required.',
         'min.business': 'Business must be at least 10 characters.'
       });
@@ -149,7 +150,23 @@ export const fetchImplementers = () => {
 
 };
 
- 
+export const fetchImplementersSelect = () => {
+  return async (dispatch, getState) => {
+    try {
+      const response = await axios.get(`/api/implementer/list/select`);
+
+      const formattedImplementers = formatSelectOptions(response.data.implementers, true);
+
+      dispatch({
+        type: FETCH_IMPLEMENTERS_SELECT,
+        payload: formattedImplementers
+      });
+    } catch (error) {
+      handleError(error, dispatch);
+    }
+  };
+};
+
 
 export const approveImplementer = implementer => {
   return async (dispatch, getState) => {

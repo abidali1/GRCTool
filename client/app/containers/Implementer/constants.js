@@ -1,10 +1,10 @@
 /*
  *
- * regulator constants
+ * implementer constants
  *
  */
-
 export const FETCH_IMPLEMENTERS = 'src/Implementer/FETCH_IMPLEMENTERS';
+export const FETCH_IMPLEMENTERS_SELECT='src/Implementer/FETCH_IMPLEMENTERS_SELECT';
 export const REMOVE_IMPLEMENTERS = 'src/Implementer/REMOVE_IMPLEMENTERS';
 export const IMPLEMENTER_FORM_CHANGE = 'src/Implementer/IMPLEMENTER_FORM_CHANGE';
 export const SET_IMPLEMENTER_FORM_ERRORS = 'src/Implementer/SET_IMPLEMENTER_FORM_ERRORS';
