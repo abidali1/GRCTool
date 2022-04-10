@@ -37,31 +37,9 @@ class Sell extends React.PureComponent {
         {isLoading && <LoadingIndicator />}
         <h2>Join GRC Tool and Register your compnay!</h2>
         <hr />
-            <Col xs='24' md='18' className='order-1 order-md-2'>
-            <Row>
-              <Col xs='20' className='order-2 order-md-1 text-md-center mb-3'>
-                <div className='agreement-banner-text'>
-                  <h3>Would you like automate the process of GRC!</h3>
-                  <h4>Secure your business with GRC Tool</h4>
-                  <b>Register Today</b>
-                </div>
-              </Col>
-
-              <Col
-                xs='20'
-                className='order-1 order-md-2 text-center mb-3 mb-md-0'
-              >
-                <img
-                  className='agreement-banner'
-                  src={'/images/banners/agreement.svg'}
-                  alt='agreement banner'
-                />
-              </Col>
-            </Row>
-          </Col> 
         <Row>
-          <Col xs='24' md='8' className='order-2 order-md-1'>
-            <form onSubmit={handleSubmit}>
+        <Col xs='12' md='8' className='order-2 order-md-1 '>
+            <form className='block-example border border-dark' onSubmit={handleSubmit}>
               <Row>
               <Col xs='6'>
                   <Input
@@ -89,7 +67,8 @@ class Sell extends React.PureComponent {
                     }}
                   />
                 </Col>
-                <h3> Information of the person responsible for managing the organization's account</h3>
+                <Col xs='12'><h4> Information of the person responsible for managing the organization's account:</h4>
+                </Col>
                 <Col xs='6'>
                   <Input
                     type={'text'}
@@ -168,7 +147,7 @@ class Sell extends React.PureComponent {
                     }}
                   />
                 </Col>
-                <h3> Information of the person responsible for cyber security in the organization </h3>
+                <Col xs='12'><h4>Information of the person responsible for cyber security in the organization:</h4></Col>
                 <Col xs='6'>
                   <Input
                     type={'text'}
@@ -247,7 +226,7 @@ class Sell extends React.PureComponent {
                     }}
                   />
                 </Col>
-                <h3> Information of the deputy person in charge of cyber security in the organization </h3>
+                <Col xs='12'><h4>Information of cyber security deputy in the organization:</h4></Col>
                 <Col xs='6'>
                   <Input
                     type={'text'}
@@ -327,7 +306,7 @@ class Sell extends React.PureComponent {
                     }}
                   />
                 </Col>
-                <h2> Brief Description About the Organization                      </h2>
+                <Col xs='12'><h4>Brief Description About the Organization:</h4></Col>
                 <br/>
                 <Col xs='6'>
                   <Input
@@ -446,7 +425,7 @@ class Sell extends React.PureComponent {
                     }}
                   />
                 </Col>
-                <h3>The number of website , applications and electronic services for the Organization </h3>
+                <Col xs='12'><h4>The number of website, applications and electronic services for the organization:</h4></Col>
                 <Col xs='6'>
                   <Input
                     type={'number'}
@@ -508,7 +487,28 @@ class Sell extends React.PureComponent {
               </div>
             </form>
           </Col>
-
+        
+        <Col xs='12' md='4' className='order-1 order-md-2'>
+            <Row>
+              <Col xs='12' className='order-2 order-md-1 text-md-center mb-3'>
+                <div className='agreement-banner-text'>
+                  <h3 className='agreement-banner-text-color'>Would you like automate the process of GRC!</h3>
+                  <h4 className='agreement-banner-text-color'>Secure your business with GRC Tool</h4>
+                  <b className='agreement-banner-text-color'>Register Today</b>
+                </div>
+              </Col>
+              <Col
+                xs='12'
+                className='order-1 order-md-2 text-center mb-3 mb-md-0'
+              >
+                <img
+                  className='agreement-banner'
+                  src={'/images/banners/agreement.svg'}
+                  alt='agreement banner'
+                />
+              </Col>
+            </Row>
+          </Col>
         </Row>
       </div>
     );

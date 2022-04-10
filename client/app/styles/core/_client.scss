@@ -1,13 +1,17 @@
 .sell {
   h2 {
-    text-transform: uppercase;
-  }
+    font-weight: 600;
+    }
 
   .agreement-banner-text {
-    background-color: $theme-white;
+    background-color: #3f8edf;
     padding: 30px 16px 30px;
     border-radius: $border-radius-primary;
   }
+
+.agreement-banner-text-color {
+  color: white;
+}
 
   .agreement-banner {
     margin: 0 auto;

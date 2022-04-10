@@ -16,8 +16,9 @@ const FrameworkDetails = props => {
             <Row className='flex-row'>
 
                 {framework.domains.map((domain) =>
+                <Table responsive>
                     <Table striped bordered hover>
-                        <Table striped bordered hover responsive="lg" >
+                       
                             <tr>
                                 <td><h3>{domain.domainNo}</h3></td>
                                 <td>{domain.domainName}</td>
@@ -25,8 +26,9 @@ const FrameworkDetails = props => {
                             <tr>
                                 <td><h3>Domain Description:</h3></td>
                                 <td>{domain.domainDescription}</td>
+                                <th></th>
                             </tr>
-                        </Table>
+                        
                         <tr>
                          <th>Control Number</th>
                             <th>SubControl Number </th>
@@ -53,6 +55,7 @@ const FrameworkDetails = props => {
                                 )}
                             </>
                         )}
+                    </Table>
                     </Table>
                 )}
             </Row>

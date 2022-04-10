@@ -4,119 +4,76 @@
 header.masthead {
 
     padding-top: 10rem;
-
     padding-bottom: calc(10rem - 4.5rem);
-
     background: linear-gradient(rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0.8) 100%), url("/images/banners/banner-1.png");
-
     background-position: center;
-
     background-repeat: no-repeat;
-
     background-attachment: scroll;
-
     background-size: cover;
-
   }
 
   header.masthead h1, header.masthead .h1 {
-
     font-size: 2.25rem;
-
   }
 
   @media (min-width: 992px) {
-
     header.masthead {
-
       height: 100vh;
-
       min-height: 40rem;
-
       padding-top: 4.5rem;
-
       padding-bottom: 0;
-
     }
 
     header.masthead p {
-
       font-size: 1.15rem;
-
     }
 
     header.masthead h1, header.masthead .h1 {
-
       font-size: 3rem;
-
     }
 
   }
 
   @media (min-width: 1200px) {
-
     header.masthead h1, header.masthead .h1 {
-
       font-size: 3.5rem;
-
     }
-
   }
 
  
 
   hr.divider {
-
     height: 0.2rem;
-
     max-width: 3.25rem;
-
     margin: 1.5rem auto;
-
     background-color: #3f51b5;
-
     border-color: #3f51b5 !important;
-
     opacity: 1;
-
 }
 
  
 
 .text-white-75 {
-
     color: white;
-
     font-weight: 600;
-
 }
 
  
 
 .btn-xl {
-
     padding: 1.25rem 2.25rem;
-
     font-size: 0.85rem;
-
     font-weight: 700;
-
     text-transform: uppercase;
-
     border: none;
-
     border-radius: 10rem;
-
 }
 
  
 
 .btn-primary {
-
     color: #fff !important;
-
     background-color: #007bff;
-
     border-color: #007bff;
 
 }
@@ -124,53 +81,47 @@ header.masthead {
  
 
 .px-4 {
-
     padding-right: 1.5rem !important;
-
     padding-left: 1.5rem !important;
-
   }
 
  
 
 .h-100 {
-
     height: 100% !important;
-
   }
 
    
 
 .page-section {
-
     padding: 8rem 0;
-
 }
 
  
 
 hr.divider-light {
-
     background-color: #fff;
-
 }
 
  
 
 .icons{
-
     size: 15px;
-
 }
 
  
 
 img.login-banner {
-
     height: 330px;
-
     width: 500px;
-
 }
+
+//form style borders
+form.block-example.border.border-dark {
+  border: 1px solid #dee2e6 !important;
+  padding: 10px;
+}
+
+//primary button style
 
  

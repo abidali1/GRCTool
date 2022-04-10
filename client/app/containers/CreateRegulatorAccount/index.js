@@ -44,7 +44,7 @@ class CreatRegulatorAccount extends React.PureComponent {
         <hr />
         <Row>
           <Col xs='12' md='6' className='order-2 order-md-1'>
-            <form onSubmit={handleSubmit}>
+            <form className='block-example border border-dark' onSubmit={handleSubmit}>
               <Row>
                 <Col xs='12'>
                   <Input
@@ -84,11 +84,8 @@ class CreatRegulatorAccount extends React.PureComponent {
                     onInputChange={(name, value) => {
                       regulatorFormChange(name, value);
                     }}
-
                   />
-
                 </Col>
-
                 <Col xs='12'>
 
               {/* <SelectOption
@@ -119,9 +116,7 @@ class CreatRegulatorAccount extends React.PureComponent {
             />
 
                 </Col>
-
                 <Col xs='12'>
-
                   <Input
                     type={'textarea'}
                     error={formErrors['business']}
@@ -145,9 +140,9 @@ class CreatRegulatorAccount extends React.PureComponent {
             <Row>
               <Col xs='12' className='order-2 order-md-1 text-md-center mb-3'>
                 <div className='agreement-banner-text'>
-                  <h3>Would you like automate the process of GRC!</h3>
-                  <h4>Secure your business with GRC Tool</h4>
-                  <b>Register Today</b>
+                  <h3 className='agreement-banner-text-color'>Would you like automate the process of GRC!</h3>
+                  <h4 className='agreement-banner-text-color'>Secure your business with GRC Tool</h4>
+                  <b className='agreement-banner-text-color'>Register Today</b>
                 </div>
               </Col>
               <Col
