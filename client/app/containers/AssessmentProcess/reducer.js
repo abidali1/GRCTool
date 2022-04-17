@@ -65,9 +65,6 @@ const assessmentReducer = (state = initialState, action) => {
         formErrors: {}
       };
 
-
-
-
     case SET_ASSESSMENTS_LOADING:
       return {
         ...state,
@@ -77,16 +74,14 @@ const assessmentReducer = (state = initialState, action) => {
     case SET_ASSESSMENT_SUBMITTING:
       return {
         ...state,
-        isFormSubmitting: action.payload
+        isAssessmentSubmitting: action.payload
       };
       case SET_ASSESSMENT_LOADING:
         return {
           ...state,
-          isLoading: action.payload
+          isAssessmentLoading: action.payload
         };
 
-
-   
     default:
       return state;
   }

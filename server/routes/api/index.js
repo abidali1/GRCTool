@@ -17,6 +17,7 @@ const orderRoutes = require('./order');
 const reviewRoutes = require('./review');
 const wishlistRoutes = require('./wishlist');
 const regulatorRoutes = require('./regulator')
+const implementedframeworkRoutes=require('./implementedframework')
 // auth routes
 router.use('/auth', authRoutes);
 
@@ -56,16 +57,8 @@ router.use('/externalauditor', externalauditorRoutes);
 // internalauditor routes
 router.use('/internalauditor', internalauditorRoutes);
 
-// cart routes
-router.use('/cart', cartRoutes);
-
-// order routes
-router.use('/order', orderRoutes);
-
-// Review routes
-router.use('/review', reviewRoutes);
-
-// Wishlist routes
-router.use('/wishlist', wishlistRoutes);
+// implementedframework routes
+router.use('/implementedframework',implementedframeworkRoutes)
+  
 
 module.exports = router;

@@ -23,7 +23,7 @@ router.put(
         const framework=req.body.framework;
         const query = { _id: implementerId };
         const update = {
-          framework: [framework]
+          framework: framework
         };
     
         await Implementer.findOneAndUpdate(query, update, {
@@ -39,6 +39,7 @@ router.put(
         });
       }
     });
+
 module.exports = router;
 
 // router.post(

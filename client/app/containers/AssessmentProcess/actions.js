@@ -47,41 +47,31 @@ export const startImplementaion = () => {
     //  const user = getState().account.user;
       const frameworks = getState().framework.frameworksSelect;
 
-      // const framework = unformatSelectOptions([assessment.framework]);
-      // const implementer = unformatSelectOptions([assessment.implementer]);
+       const framework = unformatSelectOptions([assessment.framework]);
+       const implementer = unformatSelectOptions([assessment.implementer]);
 
       const newAssessment = {
-
         framework: unformatSelectOptions(assessment.framework),
         implementer: unformatSelectOptions(assessment.implementer),
       };
-
- 
 
       const { isValid, errors } = allFieldsValidation(newAssessment, rules, {
         'required.framework': 'Frameworks is required.',
         'required.implementer': 'Implementer is required.'
       });
 
- 
-
       if (!isValid) {
         return dispatch({ type: SET_ASSESSMENT_FORM_ERRORS, payload: errors });
       }
 
- 
-
       dispatch({ type: SET_ASSESSMENT_SUBMITTING, payload: true });
       dispatch({ type: SET_ASSESSMENT_LOADING, payload: true });
 
- 
-
-      const response = await axios.post(
-        '/api/implementer/assignimplementiontask',
+      const response = await axios.put(
+        '/api/implementedframework/assignimplementiontask',
         newAssessment
       );
 
- 
 
       const successfulOptions = {
         title: `${response.data.message}`,

@@ -25,7 +25,7 @@ class FrameworkToImplement extends React.PureComponent {
       isSubmitting,
       frameworks,
       implementers,
-      isLoading,
+      isALoading,
       multi,
       regulator,
       defaultValue,
@@ -41,16 +41,14 @@ class FrameworkToImplement extends React.PureComponent {
 
     return (
       <div className='sell'>
-        {isLoading && <LoadingIndicator />}
-        <h2>Choose the framework and the person who implements it</h2>
+        {isALoading && <LoadingIndicator />}
+        <h2>Choose the framework and the implementer</h2>
         <hr />
         <Row>
           <Col xs='12' md='6' className='order-2 order-md-1'>
             <form onSubmit={handleSubmit}>
               <Row>
-
                 <Col xs='12'>
-
 
               <SelectOption
               error={formErrors['framework']}
@@ -68,7 +66,7 @@ class FrameworkToImplement extends React.PureComponent {
               <SelectOption
               error={formErrors['implementer']}
               label={'Select Implementers'}
-              multi={false}
+              multi={true}
               value={assessmentFormData.implementers}
               options={implementers}
               handleSelectChange={value => {
@@ -96,11 +94,10 @@ class FrameworkToImplement extends React.PureComponent {
 const mapStateToProps = state => {
 
   return {
-
     assessmentFormData: state.assessment.assessmentFormData,
     formErrors: state.assessment.formErrors,
     isSubmitting: state.assessment.isAssessmentSubmitting,
-    isLoading: state.assessment.isAssessmentLoading,
+    isALoading: state.assessment.isAssessmentLoading,
     frameworks: state.framework.frameworksSelect,
     implementers:state.implementer.implementersSelect
   };
