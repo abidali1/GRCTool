@@ -19,9 +19,9 @@ const ImplementerSchema = new Schema({
   phoneNumber: {
     type: String
   },
-  framework: {
-    type: String
-  },
+  // framework: {
+  //   type: String
+  // },
 
   isActive: {
     type: Boolean,

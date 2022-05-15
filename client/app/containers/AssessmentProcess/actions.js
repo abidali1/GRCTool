@@ -47,8 +47,8 @@ export const startImplementaion = () => {
     //  const user = getState().account.user;
       const frameworks = getState().framework.frameworksSelect;
 
-       const framework = unformatSelectOptions([assessment.framework]);
-       const implementer = unformatSelectOptions([assessment.implementer]);
+      const framework = unformatSelectOptions([assessment.framework]);
+      const implementer = unformatSelectOptions([assessment.implementer]);
 
       const newAssessment = {
         framework: unformatSelectOptions(assessment.framework),

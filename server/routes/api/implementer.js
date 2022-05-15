@@ -105,6 +105,30 @@ router.get(
     }
   }
 );
+
+//--NEW--
+//list of implementers assigned with frameworks 
+router.get('/assignedImplementers', async (req, res) => {
+  try {
+    const assignedImplementers = await Implementer.find({})
+      .populate({
+        path: 'implementer',
+        select: 'name'
+      })
+      .populate({
+        path: 'framework',
+        select: 'name'
+      })
+
+    res.status(200).json({
+      assignedImplementers
+    });
+  } catch (error) {
+    res.status(400).json({
+      error: 'Your request could not be processed. Please try again.'
+    });
+  }
+});
 // approve regulators
 router.put('/approve/:implementerId', auth, async (req, res) => {
   try {

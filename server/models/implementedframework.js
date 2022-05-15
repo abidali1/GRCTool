@@ -1,7 +1,7 @@
 const Mongoose = require('mongoose');
 const { Schema } = Mongoose;
 
-// Cart Item Schema
+// ImplementedControl Schema
 const ImplementedControlSchema = new Schema({
   control: {
     type: Schema.Types.ObjectId,
@@ -58,7 +58,7 @@ const ImplementedControlSchema = new Schema({
 
 module.exports = Mongoose.model('ImplementedControl', ImplementedControlSchema);
 
-// Cart Schema
+// ImplementedFramework Schema
 const ImplementedFrameworkSchema = new Schema({
   framework:{
     type:Schema.Types.ObjectId,

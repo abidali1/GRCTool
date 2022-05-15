@@ -117,9 +117,9 @@ class implement extends React.PureComponent {
             <Row>
               <Col xs='12' className='order-2 order-md-1 text-md-center mb-3'>
                 <div className='agreement-banner-text'>
-                  <h3>Would you like automate the process of GRC!</h3>
-                  <h4>Secure your business with GRC Tool</h4>
-                  <b>Register Today</b>
+                  <h3 className='join_text'>Would you like automate the process of GRC!</h3>
+                  <h4 className='join_text'>Secure your business with GRC Tool</h4>
+                  <b className='join_text'>Register Today</b>
                 </div>
               </Col>
 
