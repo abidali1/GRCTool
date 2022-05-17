@@ -10,6 +10,8 @@ import {
   SET_IMPLEMENTER_FORM_ERRORS,
   IMPLEMENTER_FORM_RESET,
   SIGNUP_CHANGE,
+  SET_ASSIGNED_IMPLEMENTERS_LOADING,
+  FETCH_IMPLEMENTERS_FRAMEWORKS,
   SET_SIGNUP_FORM_ERRORS,
   SET_IMPLEMENTERS_LOADING,
   SET_IMPLEMENTER_SUBMITTING,
@@ -163,6 +165,26 @@ export const fetchImplementersSelect = () => {
       });
     } catch (error) {
       handleError(error, dispatch);
+    }
+  };
+};
+
+// --NEW--
+export const fetchAssignedImplementers = () => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({ type: SET_ASSIGNED_IMPLEMENTERS_LOADING, payload: true });
+//connect to the API
+      const response = await axios.get(`/api/implementer/assignedImplementers`);
+      
+      dispatch({
+        type: FETCH_IMPLEMENTERS_FRAMEWORKS,
+        payload: response.data.assignedImplementers
+      });
+    } catch (error) {
+      handleError(error, dispatch);
+    } finally {
+      dispatch({ type: SET_ASSIGNED_IMPLEMENTERS_LOADING, payload: false });
     }
   };
 };

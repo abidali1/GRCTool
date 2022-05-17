@@ -108,9 +108,16 @@ router.get(
 
 //--NEW--
 //list of implementers assigned with frameworks 
-router.get('/assignedImplementers', async (req, res) => {
+router.get(
+  '/assignedImplementers',
+  auth,
+  role.checkRole(role.ROLES.Client),
+  async (req, res) => {
   try {
-    const assignedImplementers = await Implementer.find({})
+
+  let assignedImplementers = null;
+
+     assignedImplementers = await Implementer.find({})
       .populate({
         path: 'implementer',
         select: 'name'

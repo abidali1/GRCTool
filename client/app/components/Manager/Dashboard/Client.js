@@ -21,6 +21,7 @@ import Order from '../../../containers/Order';
 import Wishlist from '../../../containers/WishList';
 import Support from '../../../containers/Support';
 import FrameworkToImplement from '../../../containers/FrameworkToImplement';
+import AssignedImplementers from '../../../containers/AssignedImplementers';
 import Implementer from '../../../containers/Implementer'
 import Implement from '../../../containers/Implement';
 import ExternalAuditor from '../../../containers/ExternalAuditor';
@@ -48,6 +49,7 @@ const Customer = props => {
               {/* <Route path='/dashboard/implementer' component={Implementer} /> */}
               <Route path='/dashboard/addimplementer' component={Implement} />
               <Route path='/dashboard/startimplementaion' component={FrameworkToImplement}/>
+              <Route path='/dashboard/assignedimplementerslist' component={AssignedImplementers}/>
               {/* <Route path='/dashboard/internalauditor' component={InternalAuditor} /> */}
               <Route path='/dashboard/addinternalauditor' component={IntAudit} />
               <Route path='/dashboard/registeredaccount' component={ExternalAuditor} />

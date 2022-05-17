@@ -1,4 +1,5 @@
 const express = require('express');
+//import { Select } from 'react-select';
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
@@ -100,7 +101,8 @@ router.get(
 
     rFrameworks = await Regulator.find(req.user.regulator).populate({
         path:'framework',
-        model:Framework
+        model:Framework,
+        select:'name description'
     });
       // For the registered regulator, filter frameworks
       // Handle result
