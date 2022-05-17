@@ -1,6 +1,6 @@
 /**
  *
- * FrameworkList
+ * Regulator Framework List
  *
  */
 import React from 'react';

@@ -1,6 +1,7 @@
 import {
   FETCH_IMPLEMENTERS,
   FETCH_IMPLEMENTERS_SELECT,
+  FETCH_IMPLEMENTERS_FRAMEWORKS,
   REMOVE_IMPLEMENTERS,
   IMPLEMENTER_FORM_CHANGE,
   SET_IMPLEMENTER_FORM_ERRORS,
@@ -10,6 +11,7 @@ import {
   SET_IMPLEMENTERS_LOADING,
   SET_IMPLEMENTER_SUBMITTING,
   SET_IMPLEMENTER_LOADING,
+  SET_ASSIGNED_IMPLEMENTERS_LOADING,
   SIGNUP_RESET
 } from './constants';
 
@@ -17,6 +19,7 @@ import {
 const initialState = {
   implementers: [],
   implementersSelect:[],
+  assignedImplementers: [],
   implementerFormData: {
 
     name: '',
@@ -40,7 +43,9 @@ const initialState = {
   signupFormErrors: {},
   isLoading: false,
   isImplementerSubmitting: false,
-  isImplementerLoading: false
+  isImplementerLoading: false,
+  isAssignedImplementerLoading: false
+  
 };
 
  
@@ -54,6 +59,12 @@ const implementerReducer = (state = initialState, action) => {
         ...state,
         implementers: action.payload
       };
+
+      case FETCH_IMPLEMENTERS_FRAMEWORKS:
+        return {
+          ...state,
+          assignedImplementers: action.payload
+        };
 
     case REMOVE_IMPLEMENTERS:
       const index = state.implementers.findIndex(b => b._id === action.payload);
@@ -120,6 +131,13 @@ const implementerReducer = (state = initialState, action) => {
         ...state,
         isImplementerLoading: action.payload
       };
+
+      case SET_ASSIGNED_IMPLEMENTERS_LOADING:
+      return {
+        ...state,
+        isAssignedImplementerLoading: action.payload
+      };
+
       case FETCH_IMPLEMENTERS_SELECT:
         return {
           ...state,

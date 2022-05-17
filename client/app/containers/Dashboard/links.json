@@ -16,6 +16,7 @@
     { "to": "/security", "name": "Account Security" },
     { "to": "/framework", "name": "Frameworks" },
     {"to": "/startimplementaion", "name":"Start Implementaion "},
+    {"to": "/assignedimplementerslist", "name":"List of Assigned Implementers "},
     { "to": "/registeredaccount", "name":"Registered Account"},
     { "to": "/addimplementer", "name": "add implementer" },
     { "to": "/addexternalauditor", "name": "add externalauditor" },

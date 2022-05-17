@@ -8,11 +8,16 @@ import Button from '../../components/Common/Button';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
 import makeAnimated from 'react-select/animated';
 
+import AssignedImplementersList from '../../components/Manager/AssignedImplementersList';
+import SubPage from '../../components/Manager/SubPage';
+
+import NotFound from '../../components/Common/NotFound';
 class FrameworkToImplement extends React.PureComponent {
 
   componentDidMount() {
     this.props.fetchFrameworksSelect(this);
     this.props.fetchImplementersSelect(this);
+    this.props.fetchAssignedImplementers();
   }
 
   render() {
@@ -26,6 +31,8 @@ class FrameworkToImplement extends React.PureComponent {
       frameworks,
       implementers,
       isALoading,
+      isAssignedImpLoading,
+      assignedImplementers,
       multi,
       regulator,
       defaultValue,
@@ -86,7 +93,24 @@ class FrameworkToImplement extends React.PureComponent {
 
           
         </Row>
+        <Row>
+        <SubPage title={'Assigned Frameworks'} isMenuOpen={null}>
+          {isAssignedImpLoading ? (
+            <LoadingIndicator inline />
+          ) : assignedImplementers.length > 0 ? (
+            <AssignedImplementersList
+            assignedImplementers={assignedImplementers}
+            />
+          ) : (
+            <NotFound message='nothing found.' />
+          )}
+        </SubPage>
+        </Row>
       </div>
+
+      
+
+      
     );
   }
 }
@@ -99,7 +123,9 @@ const mapStateToProps = state => {
     isSubmitting: state.assessment.isAssessmentSubmitting,
     isALoading: state.assessment.isAssessmentLoading,
     frameworks: state.framework.frameworksSelect,
-    implementers:state.implementer.implementersSelect
+    implementers:state.implementer.implementersSelect,
+    assignedImplementers: state.implementer.assignedImplementers,
+    isAssignedImpLoading: state.implementer.isAssignedImplementerLoading
   };
 
 };
