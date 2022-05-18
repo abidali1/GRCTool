@@ -14,21 +14,7 @@ const RegulatorFrameworkList = props => {
     <div className='b-list'>
       {rFrameworks.map((rFramework, index) => (        
         <>
-          {/* <div className='d-flex align-items-center justify-content-between mb-2'>
-            <h4>Regulator Name:</h4>
-            </div>
-            <div className='d-flex align-items-center justify-content-between mb-2'>
-            <p className='brand-desc mb-2'>{rFramework.name}</p>
-          </div>
-          <div className='d-flex align-items-center justify-content-between mb-2'>
-            <h4>Regulator Email:</h4>
-          </div>
-          <div className='d-flex align-items-center justify-content-between mb-2'>
-            <p className='brand-desc mb-2'>{rFramework.email}</p>
-          </div>
-          <div className='d-flex align-items-center justify-content-between mb-2'>
-            <h4>Framework name:</h4>
-          </div> */}
+ 
              {rFramework.framework.map((framework, index)=>
             <Link
              to={`/dashboard/framework/${framework._id}`}
@@ -41,14 +27,7 @@ const RegulatorFrameworkList = props => {
               </Link>
              )}
           
-          {/* <div className='d-flex align-items-center justify-content-between mb-2'>
-            <h4>Framework description:</h4>
-          </div>
-          <div className='d-flex align-items-center justify-content-between mb-2'>
-             {rFramework.framework.map((framework, index)=>
-            <p key={index}>{framework.description}</p>
-             )}
-          </div> */}
+
     </>
       ))}
     </div>
