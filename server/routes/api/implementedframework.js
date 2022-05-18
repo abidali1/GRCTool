@@ -26,7 +26,7 @@ router.put(
           framework: framework
         };
     
-        await Implementer.findOneAndUpdate(query, update, {
+        await Implementer.updateMany(query, update, {
           new: true
         });
     

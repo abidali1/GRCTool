@@ -4,7 +4,7 @@
  *
  */
  import React from 'react';
- import { Row, Col } from 'reactstrap';
+ import { Row, Col, Table } from 'reactstrap';
 
  const AssignedImplementersList = props => {
    const { assignedImplementers } = props;
@@ -13,24 +13,33 @@
      <div className='b-list'>
        {assignedImplementers.map((assignedImplementer, index) => (        
          <>
-           <div className='d-flex align-items-center justify-content-between mb-2'>
-            <h4>Implementer Name:</h4>
-            </div>
-            <div className='d-flex align-items-center justify-content-between mb-2'>
-            <p className='brand-desc mb-2'>{assignedImplementer.name}</p>
-          </div>
+          <Table responsive>
+              <Table striped bordered hover>
+            <tr>
+           <th>Implementer Name:</th> 
+            </tr>
+            
+            <tr>
+             <td><p key={index} className='brand-desc mb-2'>{assignedImplementer.name}</p></td> 
+          </tr>
+          <tr>
+             <th>Framework Name:</th>
+           </tr>
               {assignedImplementer.framework.map((framework, index)=>
               <>
-                     <div className='d-flex align-items-center justify-content-between mb-2'>
-                     <h4>Framework Name:</h4>
-                     </div>
-                     <div className='d-flex align-items-center justify-content-between mb-2'>
-                     <p className='brand-desc mb-2'>{framework.name}</p>
-                   </div> 
+              <tr>
+               <td><p key={index} className='brand-desc mb-2'>{framework.name}</p>
+                </td>
+
+              </tr>
               </>
              )}
-         </>
+         
+          </Table>
+       </Table>
+       </>
        ))}
+       
      </div>
    );
  };
