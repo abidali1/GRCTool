@@ -21,6 +21,7 @@ import Order from '../../../containers/Order';
 import Wishlist from '../../../containers/WishList';
 import Support from '../../../containers/Support';
 import Implementer from '../../../containers/Implementer'
+import ImplementerDashboard from '../../../containers/ImplementerDashboard'
 const Customer = props => {
   return (
     <div className='client'>
@@ -31,7 +32,8 @@ const Customer = props => {
         <Col xs='12' md='7' xl='9'>
           <div className='panel-body'>
             <Switch>
-              <Route exact path='/dashboard' component={Account} />
+              <Route exact path='/dashboard' component={ImplementerDashboard} />
+              <Route path='/dashboard/account' component={Account} />
               <Route path='/dashboard/security' component={AccountSecurity} />
               <Route path='/dashboard/address' component={Address} />
               <Route path='/dashboard/control' component={Control} />

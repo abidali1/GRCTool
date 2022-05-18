@@ -16,7 +16,10 @@ import {
   SET_IMPLEMENTERS_LOADING,
   SET_IMPLEMENTER_SUBMITTING,
   SET_IMPLEMENTER_LOADING,
-  SIGNUP_RESET
+  SIGNUP_RESET,
+  //new
+  FETCH_IMPLEMENTER_FRAMEWORKS,
+  SET_IMPLEMENTER_FRAMEWORKS_LOADING 
 } from './constants';
 
 import handleError from '../../utils/error';
@@ -291,4 +294,28 @@ export const deleteImplementer = id => {
       handleError(error, dispatch);
     }
   };
+};
+
+
+ 
+
+export const fetchImplementerframeworks = () => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({ type: SET_IMPLEMENTER_FRAMEWORKS_LOADING, payload: true });
+      const response = await axios.get(`/api/implementedframework/assignframeworklist`);
+
+      dispatch({
+        type: FETCH_IMPLEMENTER_FRAMEWORKS ,
+        payload: response.data.frameworks
+      });
+
+    } catch (error) {
+      handleError(error, dispatch);
+    } finally {
+      dispatch({ type: SET_IMPLEMENTER_FRAMEWORKS_LOADING, payload: false });
+    }
+
+  };
+
 };

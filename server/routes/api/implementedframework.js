@@ -42,6 +42,28 @@ router.put(
 
 module.exports = router;
 
+router.get(
+  '/assignframeworklist',
+  auth,
+  role.checkRole(role.ROLES.Implementer),async(req,res)=>{
+    try{
+ 
+      let frameworks=null
+
+      frameworks = await Implementer.find(req.user.implementer).populate(
+        'framework', 'name'
+    );
+      res.status(200).json({
+        frameworks
+        // success: true
+      });
+    } catch (error) {
+      res.status(400).json({
+        error: 'Your request could not be processed. Please try again.'
+      });
+    }
+  }
+  );
 // router.post(
 //   '/implementation/:frameworkId',
 //   auth,

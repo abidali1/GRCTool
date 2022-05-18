@@ -35,7 +35,6 @@ import contactReducer from './containers/Contact/reducer';
 import orderReducer from './containers/Order/reducer';
 import reviewReducer from './containers/Review/reducer';
 import wishListReducer from './containers/WishList/reducer';
-import implementer from './containers/Implementer/reducer';
 import implementerReducer from './containers/Implementer/reducer';
 import externalauditorReducer from './containers/ExternalAuditor/reducer';
 import internalauditorReducer from './containers/InternalAuditor/reducer';

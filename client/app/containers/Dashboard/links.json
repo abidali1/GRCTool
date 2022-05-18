@@ -24,7 +24,8 @@
     { "to": "/support", "name": "Support" }
   ],
   "ROLE_IMPLEMENTER": [
-    { "to": "", "name": "Account Details" },
+    { "to": "", "name": "Dashboard" },
+    { "to": "/account", "name": "Account Details" },
     { "to": "/security", "name": "Account Security" },
     { "to": "/address", "name": "Address" },
     { "to": "/framework", "name": "Frameworks" },

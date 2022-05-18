@@ -12,12 +12,17 @@ import {
   SET_IMPLEMENTER_SUBMITTING,
   SET_IMPLEMENTER_LOADING,
   SET_ASSIGNED_IMPLEMENTERS_LOADING,
-  SIGNUP_RESET
+  SIGNUP_RESET,
+  
+  FETCH_IMPLEMENTER_FRAMEWORKS,
+  SET_IMPLEMENTER_FRAMEWORKS_LOADING ,
+
 } from './constants';
 
 
 const initialState = {
   implementers: [],
+  frameworks: [],
   implementersSelect:[],
   assignedImplementers: [],
   implementerFormData: {
@@ -154,6 +159,20 @@ const implementerReducer = (state = initialState, action) => {
           password: ''
         }
       };
+      
+    case FETCH_IMPLEMENTER_FRAMEWORKS:
+      return {
+        ...state,
+        frameworks: action.payload
+      };
+
+    case SET_IMPLEMENTER_FRAMEWORKS_LOADING:
+      return {
+        ...state,
+        isImpLoading: action.payload
+      };
+
+
     default:
       return state;
   }
