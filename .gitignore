@@ -8,6 +8,7 @@
 # misc
 package.json.bak
 .DS_Store
+package-lock.json
 
 # config file
 .vscode

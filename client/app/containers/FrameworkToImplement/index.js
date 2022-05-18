@@ -52,7 +52,7 @@ class FrameworkToImplement extends React.PureComponent {
         <h2>Choose the framework and the implementer</h2>
         <hr />
         <Row>
-          <Col xs='12' md='6' className='order-2 order-md-1'>
+          <Col xs='12' md='8' className='order-2 order-md-1'>
             <form onSubmit={handleSubmit}>
               <Row>
                 <Col xs='12'>
@@ -88,12 +88,13 @@ class FrameworkToImplement extends React.PureComponent {
               <div className='sell-actions'>
                 <Button type='submit' text='Submit' disabled={isSubmitting} />
               </div>
+              <hr />
             </form>
           </Col>
-
-          
         </Row>
+
         <Row>
+        <Col xs='12' md='8' className='order-2 order-md-1'>
         <SubPage title={'Assigned Frameworks'} isMenuOpen={null}>
           {isAssignedImpLoading ? (
             <LoadingIndicator inline />
@@ -105,7 +106,9 @@ class FrameworkToImplement extends React.PureComponent {
             <NotFound message='nothing found.' />
           )}
         </SubPage>
+        </Col>
         </Row>
+
       </div>
 
       
