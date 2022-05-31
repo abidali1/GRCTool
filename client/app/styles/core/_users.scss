@@ -19,12 +19,32 @@
   }
 
   &.client {
-    background-color: $dark-bg;
+    background-color: $outline-color;
     color: $white;
   }
 
   &.member {
     background-color: $secondary-bg;
+  }
+
+  &.externalauditor {
+    background-color: $theme-pink;
+    color: $white;
+  }
+
+  &.implementer {
+    background-color: $green;
+    color: $white;
+  }
+
+  &.regulator {
+    background-color: $purple;
+    color: $white;
+  }
+
+  &.internalauditor {
+    background-color: $theme-green;
+    color: $white;
   }
 }
 /* end user role styles */
